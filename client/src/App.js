@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "./actions";
@@ -19,8 +19,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="containerr">
-          <Header />
           <Route exact path="/" component={Landing} />
+          <Route
+            exact
+            path={["/problemset", "/problemset/:id", "/solutions/:id"]}
+            component={Header}
+          />
           <Route exact path="/problemset" component={Problems} />
           <Route exact path="/problemset/:id" component={ProbsOfComp} />
           <Route exact path="/solutions/:id" component={Solutions} />
@@ -32,12 +36,3 @@ class App extends Component {
 
 export default connect(null, actions)(App);
 //
-
-{
-  /* <Route path='/some-path' render={() =>
-  <Fragment>
-    <FirstChild />
-    <SecondChild />
-  </Fragment>
-} /> */
-}

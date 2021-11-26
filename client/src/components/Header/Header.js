@@ -20,7 +20,7 @@ class Header extends Component {
   render() {
     return (
       <div className="nav">
-        <Navbar inverse collapseOnSelect bg="light">
+        <Navbar inverse bg="primary">
           <Navbar.Header></Navbar.Header>
           <Navbar.Collapse>
             <Nav>
@@ -41,3 +41,5 @@ function mapStateToProps({ auth }) {
 }
 
 export default connect(mapStateToProps)(Header);
+
+//  "react-bootstrap": "^0.32.1",

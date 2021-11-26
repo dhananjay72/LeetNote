@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import * as Icon from "react-bootstrap-icons";
 
 const Landing = () => {
   const g1 = () => {
@@ -12,7 +13,7 @@ const Landing = () => {
         {/* <input type="checkbox" id="check"> */}
         <header>
           <h2>
-            <a href="#" class="logo">
+            <a href="/" class="logo">
               LeetStore
             </a>
           </h2>
@@ -34,7 +35,7 @@ const Landing = () => {
                 g1();
               }}
             >
-              Log In
+              Sign In <Icon.BoxArrowInRight />
             </a>
           </div>
         </div>
