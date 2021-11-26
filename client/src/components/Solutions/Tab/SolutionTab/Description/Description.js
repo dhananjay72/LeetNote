@@ -76,11 +76,11 @@ class Description extends Component {
     }
 
     return (
-      <Panel eventKey={this.props.eventKey}>
+      <Panel eventKey={this.props.eventKey} bsStyle="success">
         <Panel.Heading>
           <Panel.Title toggle>Description</Panel.Title>
         </Panel.Heading>
-        <Panel.Body collapsible>
+        <Panel.Body collapsible bsStyle="info">
           <Linkify>{content}</Linkify>
         </Panel.Body>
       </Panel>

@@ -104,7 +104,7 @@ class DashBoard extends Component {
     return (
       <div className="container background">
         <FilterBar filtered={this.filterHandler} search={this.searchHandler} />
-        <Table striped condensed hover>
+        <Table variant="dark">
           <TableTitle clicked={this.sortTableHandler} />
           {this.renderContent()}
         </Table>

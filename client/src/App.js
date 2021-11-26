@@ -1,22 +1,24 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import * as actions from './actions';
-import Header from './components/Header/Header';
-import Landing from './components/Landing';
-import Problems from './components/Problems/Problems';
-import ProbsOfComp from './components/Problems/ProbsOfComp'
-import Solutions from './components/Solutions/Solutions'
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { connect } from "react-redux";
+import * as actions from "./actions";
+import Header from "./components/Header/Header";
+//import Landing from "./components/Landing";
+import Landing from "./Landing/Landing";
+import Problems from "./components/Problems/Problems";
+import ProbsOfComp from "./components/Problems/ProbsOfComp";
+import Solutions from "./components/Solutions/Solutions";
+import "./app.css";
 
 class App extends Component {
-  componentDidMount(){
-    this.props.fetchUser()
+  componentDidMount() {
+    this.props.fetchUser();
   }
-  
-  render(){
+
+  render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className="containerr">
           <Header />
           <Route exact path="/" component={Landing} />
           <Route exact path="/problemset" component={Problems} />
@@ -24,8 +26,18 @@ class App extends Component {
           <Route exact path="/solutions/:id" component={Solutions} />
         </div>
       </BrowserRouter>
-    )
+    );
   }
 }
 
 export default connect(null, actions)(App);
+//
+
+{
+  /* <Route path='/some-path' render={() =>
+  <Fragment>
+    <FirstChild />
+    <SecondChild />
+  </Fragment>
+} /> */
+}

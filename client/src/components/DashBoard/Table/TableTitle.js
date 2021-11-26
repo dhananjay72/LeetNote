@@ -4,9 +4,7 @@ const TableTitle = (props) => {
   return (
     <thead>
       <tr>
-        <th className="text-center" scope="col">
-          {" "}
-        </th>
+        <th className="text-center" scope="col"></th>
         <th scope="col" onClick={() => props.clicked(PROBLEM.ID)}>
           #
         </th>
